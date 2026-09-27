@@ -1,0 +1,20 @@
+{
+  "name": "NAOKI JOURNAL",
+  "url": "https://naokijournal.com",
+  "launchDate": "2026-10-01",
+  "author": "Naoki Suehiro",
+  "description": "Thoughts on Education, Work, Life, and the World. An independent journal by Naoki Suehiro.",
+  "fields": [
+    {"id": "education", "name": "EDUCATION", "topics": "Children / Early Childhood Education / Parenting / Resilience / Learning"},
+    {"id": "global-workforce", "name": "GLOBAL WORKFORCE", "topics": "Foreign Workforce / Japanese Language Education / Organizations / Japan × ASEAN"},
+    {"id": "life-resilience", "name": "LIFE & RESILIENCE", "topics": "Life / Failure / Recovery / Challenge / Marathon / Personal Philosophy"},
+    {"id": "japan-asia", "name": "JAPAN × ASIA", "topics": "Okinawa / Japan / Indonesia / ASEAN / Culture / Travel"}
+  ],
+  "stories": [
+    {"slug": "language-as-infrastructure", "title": "Japanese language is not a skill. It is infrastructure.", "field": "global-workforce", "featured": true, "status": "forthcoming", "issue": "ISSUE 001 / OCTOBER 2026", "image": "photo-1519608487953-e999c86e7455", "alt": "A quiet urban street in Japan at night", "body": []},
+    {"slug": "what-children-need-when-they-fail", "title": "What Children Need When They Fail", "field": "education", "status": "forthcoming", "image": "photo-1503454537195-1dcabb73ffb9", "alt": "A child exploring outdoors", "body": []},
+    {"slug": "marathon-and-resilience", "title": "What 42.195 km Taught Me About Resilience", "field": "life-resilience", "status": "forthcoming", "image": "photo-1476480862126-209bfaa8edc8", "alt": "A runner on an outdoor path", "body": []},
+    {"slug": "between-okinawa-and-asia", "title": "Between Okinawa and Asia", "field": "japan-asia", "status": "forthcoming", "image": "photo-1518837695005-2083093ee35b", "alt": "Open sea and waves beneath a soft sky", "body": []},
+    {"slug": "workplaces-where-people-stay", "title": "Designing Workplaces Where Foreign Workers Can Stay", "field": "global-workforce", "status": "forthcoming", "image": "photo-1521737711867-e3b97375f902", "alt": "People gathered around a table in a shared workplace", "body": []}
+  ]
+}
