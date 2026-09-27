@@ -22,7 +22,20 @@ for story in stories:
     assert story['field'] in fields, 'Unknown category'
     assert story['status'] in ('forthcoming', 'published'), 'Unknown status'
     assert isinstance(story['body'], list), 'Body must be a list of paragraphs'
-    assert story['status'] != 'published' or story['body'], 'Published stories require body text'
+    if 'translations' in story:
+        assert story['defaultLanguage'] == 'ja', 'Bilingual articles start in Japanese'
+        assert set(story['translations']) == {'ja', 'en'}, 'Both final copies are required'
+        assert all(isinstance(story.get(key), str) and story[key].strip() for key in ('articleTitle', 'subtitle', 'issueLabel'))
+        for blocks in story['translations'].values():
+            assert isinstance(blocks, list) and blocks, 'Translation must contain body blocks'
+            for block in blocks:
+                assert block['type'] in ('paragraph', 'heading', 'lead', 'signature'), 'Unknown body block'
+                assert block.get('lang') in (None, 'ja', 'en'), 'Invalid block language'
+                assert isinstance(block['content'], list) and block['content'], 'Empty block'
+                for span in block['content']:
+                    assert isinstance(span['text'], str) and span['text'], 'Empty text'
+                    assert isinstance(span.get('strong', False), bool), 'Invalid emphasis'
+    assert story['status'] != 'published' or story['body'] or story.get('translations'), 'Published stories require body text'
 assert len([s for s in stories if s.get('featured')]) == 1
 assert urlparse(data['url']).scheme == 'https'
 OUT.mkdir(exist_ok=True)
@@ -40,13 +53,54 @@ def card(story):
     link = '/stories/' + story['slug'] + '/'
     return f'<article class="story"><a class="story-image" href="{link}" aria-label="{e(story["title"])}">{img(story)}</a><p class="category">{e(fields[story["field"]]["name"])}</p><h3><a href="{link}">{e(story["title"])}</a></h3><p class="story-status">{"FORTHCOMING / 創刊準備中" if story["status"] == "forthcoming" else "BY NAOKI SUEHIRO"}</p></article>'
 
+def render_blocks(blocks):
+    rendered = []
+    for block in blocks:
+        tag = 'h2' if block['type'] == 'heading' else 'p'
+        block_class = {'lead': 'article-lead', 'signature': 'editorial-signature'}.get(block['type'])
+        attrs = f' class="{block_class}"' if block_class else ''
+        if block.get('lang'):
+            attrs += f' lang="{block["lang"]}"'
+        spans = []
+        for span in block['content']:
+            text = e(span['text']).replace('\n', '<br>')
+            spans.append('<strong>' + text + '</strong>' if span.get('strong') else text)
+        rendered.append(f'<{tag}{attrs}>' + ''.join(spans) + f'</{tag}>')
+    return '\n'.join(rendered)
+
+def bilingual_article(story):
+    bodies = []
+    for language in ('ja', 'en'):
+        hidden = '' if language == story['defaultLanguage'] else ' hidden'
+        note = '<p>Originally written in Japanese.</p>' if language == 'en' else ''
+        bodies.append(f'''<section id="article-{language}" class="article-body" lang="{language}" aria-label="{'日本語本文' if language == 'ja' else 'English article'}"{hidden}>
+{render_blocks(story['translations'][language])}
+<footer class="article-colophon" lang="en">{note}<p>NAOKI JOURNAL · {e(story['issueLabel'])}</p></footer>
+</section>''')
+    return f'''<article class="article-page bilingual-article" data-bilingual-article>
+<header class="article-heading" lang="en">
+<p class="category">{e(story['issueLabel'])} · {e(fields[story['field']]['name'])}</p>
+<h1>{e(story['articleTitle'])}</h1>
+<p class="article-subtitle">{e(story['subtitle'])}</p>
+</header>
+<div class="language-switch" role="group" aria-label="本文の言語 / Article language" hidden>
+<button type="button" id="language-ja" lang="ja" aria-pressed="true" aria-controls="article-ja" data-language="ja">日本語</button>
+<span aria-hidden="true">｜</span>
+<button type="button" id="language-en" lang="en" aria-pressed="false" aria-controls="article-en" data-language="en">ENGLISH</button>
+</div>
+<div class="article-image" lang="en">{img(story,True)}</div>
+{''.join(bodies)}
+<a class="text-link article-back" lang="en" href="/#stories">← BACK TO THE JOURNAL</a>
+</article>'''
+
 pages = []
-def page(path, title, content, description=None, noindex=False, story=None):
+def page(path, title, content, description=None, noindex=False, story=None, bilingual=False):
     target = OUT / path / 'index.html'
     target.parent.mkdir(parents=True, exist_ok=True)
     canonical = data['url'].rstrip('/') + '/' + (path + '/' if path else '')
     image_story = story or next(s for s in stories if s.get('featured'))
-    rendered = base.substitute(title=e(title), description=e(description or data['description']), canonical=e(canonical), content=content, robots='noindex, follow' if noindex else 'index, follow', og_type='article' if story and story['status'] == 'published' else 'website', og_image=e(photo(image_story,1600)), og_alt=e(image_story['alt']))
+    article_assets = '\n<link rel="stylesheet" href="/assets/article.css">\n<script src="/assets/article-language.js" defer></script>' if bilingual else ''
+    rendered = base.substitute(title=e(title), description=e(description or data['description']), canonical=e(canonical), content=content, robots='noindex, follow' if noindex else 'index, follow', og_type='article' if story and story['status'] == 'published' else 'website', og_image=e(photo(image_story,1600)), og_alt=e(image_story['alt']), document_lang='ja' if bilingual else 'en', og_locale='ja_JP' if bilingual else 'en_US', chrome_lang=' lang="en"' if bilingual else '', article_assets=article_assets)
     target.write_text(rendered)
     if not noindex:
         pages.append(canonical)
@@ -68,6 +122,9 @@ content = f'''
 page('', 'NAOKI JOURNAL — Experience becomes philosophy', content)
 for story in stories:
     forthcoming = story['status'] == 'forthcoming'
+    if 'translations' in story:
+        page('stories/' + story['slug'], story['articleTitle'] + ' — NAOKI JOURNAL', bilingual_article(story), description=story['subtitle'], noindex=forthcoming, story=story, bilingual=True)
+        continue
     body = '<aside class="notice"><p class="eyebrow">FORTHCOMING / 創刊準備中</p><p>This story is being prepared for NAOKI JOURNAL. The journal is scheduled to launch on October 1, 2026.</p><p lang="ja">この記事は現在準備中です。掲載タイトル・写真は仮のものです。</p></aside>' if forthcoming else ''.join('<p>' + e(p) + '</p>' for p in story['body'])
     article = f'<article class="article-page"><a class="text-link" href="/#stories">← BACK TO THE JOURNAL</a><p class="category" style="margin-top:40px">{e(fields[story["field"]]["name"])}</p><h1>{e(story["title"])}</h1><p class="eyebrow">BY NAOKI SUEHIRO</p><div class="article-image">{img(story,True)}</div>{body}</article>'
     page('stories/' + story['slug'], story['title'] + ' — NAOKI JOURNAL', article, noindex=forthcoming, story=story)
