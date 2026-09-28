@@ -51,7 +51,7 @@ def img(story, featured=False):
 
 def card(story):
     link = '/stories/' + story['slug'] + '/'
-    return f'<article class="story"><a class="story-image" href="{link}" aria-label="{e(story["title"])}">{img(story)}</a><p class="category">{e(fields[story["field"]]["name"])}</p><h3><a href="{link}">{e(story["title"])}</a></h3><p class="story-status">{"FORTHCOMING / 創刊準備中" if story["status"] == "forthcoming" else "BY NAOKI SUEHIRO"}</p></article>'
+    return f'<article class="story"><a class="story-image" href="{link}" aria-label="{e(story["title"])}">{img(story)}</a><p class="category">{e(fields[story["field"]]["name"])}</p><h3><a href="{link}">{e(story["title"])}</a></h3><p class="story-status">{"FORTHCOMING" if story["status"] == "forthcoming" else "BY NAOKI SUEHIRO"}</p></article>'
 
 def render_blocks(blocks):
     rendered = []
@@ -90,7 +90,7 @@ def bilingual_article(story):
 </div>
 <div class="article-image" lang="en">{img(story,True)}</div>
 {''.join(bodies)}
-<a class="text-link article-back" lang="en" href="/#stories">← BACK TO THE JOURNAL</a>
+<a class="text-link article-back" lang="en" href="/">← BACK TO THE JOURNAL</a>
 </article>'''
 
 pages = []
@@ -106,6 +106,9 @@ def page(path, title, content, description=None, noindex=False, story=None, bili
         pages.append(canonical)
 
 featured = next(s for s in stories if s.get('featured'))
+featured_published = featured['status'] == 'published'
+featured_action = 'READ THE STORY' if featured_published else 'FORTHCOMING STORY'
+featured_label = ('Read the story: ' if featured_published else 'Explore the forthcoming story: ') + featured['title']
 latest = ''.join(card(s) for s in stories if not s.get('featured'))
 field_links = ''.join(f'<a class="field" href="/categories/{f["id"]}/"><span class="field-number">{i:02}</span><h3>{e(f["name"])}</h3><p>{e(f["topics"])}</p><span class="field-arrow" aria-hidden="true">↗</span></a>' for i,f in enumerate(data['fields'],1))
 content = f'''
@@ -114,8 +117,8 @@ content = f'''
 <h1 id="journal-title">NAOKI JOURNAL</h1>
 <div class="hero-bottom"><p class="hero-description">Thoughts on Education, Work,<br>Life, and the World.</p><p class="hero-copy">Experience becomes philosophy<br>when we give it words.</p></div>
 </section>
-<section class="featured wrap" aria-labelledby="featured-title"><a class="featured-image" href="/stories/{featured['slug']}/" aria-label="Explore the forthcoming cover story">{img(featured,True)}</a><div class="featured-content"><p class="eyebrow issue">ISSUE 001 / OCTOBER 2026</p><div><p class="category">GLOBAL WORKFORCE</p><h2 id="featured-title"><a href="/stories/{featured['slug']}/">{e(featured['title'])}</a></h2><p class="byline">BY NAOKI SUEHIRO</p></div><a class="text-link" href="/stories/{featured['slug']}/">FORTHCOMING STORY <span aria-hidden="true">↗</span></a></div></section>
-<section class="section wrap" id="stories" aria-labelledby="stories-title"><div class="section-heading"><h2 class="section-label" id="stories-title">LATEST STORIES</h2><p>The inaugural collection · Coming October 2026</p></div><div class="story-grid">{latest}</div></section>
+<section class="featured wrap" aria-labelledby="featured-title"><a class="featured-image" href="/stories/{featured['slug']}/" aria-label="{e(featured_label)}">{img(featured,True)}</a><div class="featured-content"><p class="eyebrow issue">ISSUE 001 / OCTOBER 2026</p><div><p class="category">GLOBAL WORKFORCE</p><h2 id="featured-title"><a href="/stories/{featured['slug']}/">{e(featured['title'])}</a></h2><p class="byline">BY NAOKI SUEHIRO</p></div><a class="text-link" href="/stories/{featured['slug']}/">{featured_action} <span aria-hidden="true">↗</span></a></div></section>
+<section class="section wrap" id="stories" aria-labelledby="stories-title"><div class="section-heading"><h2 class="section-label" id="stories-title">FORTHCOMING</h2></div><div class="story-grid">{latest}</div></section>
 <section class="section fields wrap" id="fields" aria-labelledby="fields-title"><div class="section-heading"><h2 class="section-label" id="fields-title">EXPLORE BY FIELD</h2><p>Four fields. One unfolding perspective.</p></div>{field_links}</section>
 <section class="statement" aria-labelledby="statement-title"><div class="wrap statement-inner"><p class="section-label">THE JOURNAL STATEMENT</p><div><h2 id="statement-title">We live first.<br>Then we find the words.</h2><p>Experience becomes a question.<br>A question becomes an idea.<br>And sometimes, an idea becomes a philosophy.</p><p class="closing">NAOKI JOURNAL exists to preserve that journey.</p></div></div></section>
 <section class="author wrap" id="about" aria-labelledby="author-title"><p class="section-label">ABOUT THE AUTHOR</p><div class="author-content"><div><h2 id="author-title">NAOKI SUEHIRO</h2><p class="author-roles">Educator.<br>Global Workforce Architect.<br>Writer.</p></div><div class="author-bio"><p>NAOKI JOURNAL is an independent journal by Naoki Suehiro — a collection of thoughts, questions, experiences, and stories about education, work, people, resilience, Japan, and Asia.</p><a class="text-link" href="https://naokisuehiro.com">VISIT NAOKI SUEHIRO <span aria-hidden="true">→</span></a></div></div></section>'''
@@ -125,7 +128,7 @@ for story in stories:
     if 'translations' in story:
         page('stories/' + story['slug'], story['articleTitle'] + ' — NAOKI JOURNAL', bilingual_article(story), description=story['subtitle'], noindex=forthcoming, story=story, bilingual=True)
         continue
-    body = '<aside class="notice"><p class="eyebrow">FORTHCOMING / 創刊準備中</p><p>This story is being prepared for NAOKI JOURNAL. The journal is scheduled to launch on October 1, 2026.</p><p lang="ja">この記事は現在準備中です。掲載タイトル・写真は仮のものです。</p></aside>' if forthcoming else ''.join('<p>' + e(p) + '</p>' for p in story['body'])
+    body = '<aside class="notice"><p class="eyebrow">FORTHCOMING</p><p>This story is being prepared for NAOKI JOURNAL.</p><p lang="ja">この記事は現在準備中です。掲載タイトル・写真は仮のものです。</p></aside>' if forthcoming else ''.join('<p>' + e(p) + '</p>' for p in story['body'])
     article = f'<article class="article-page"><a class="text-link" href="/#stories">← BACK TO THE JOURNAL</a><p class="category" style="margin-top:40px">{e(fields[story["field"]]["name"])}</p><h1>{e(story["title"])}</h1><p class="eyebrow">BY NAOKI SUEHIRO</p><div class="article-image">{img(story,True)}</div>{body}</article>'
     page('stories/' + story['slug'], story['title'] + ' — NAOKI JOURNAL', article, noindex=forthcoming, story=story)
 for field in data['fields']:
