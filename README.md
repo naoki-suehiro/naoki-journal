@@ -48,14 +48,32 @@ The current sitemap contains six URLs: HOME, four category pages and ISSUE 001. 
 
 ## Metadata and photography
 
-The canonical base URL is `https://naokijournal.com`, configured in `content/journal.json`. ISSUE 001 uses its approved English title and subtitle for title/description and OGP, `ja_JP` for its initial OGP locale, and a summary-large-image Twitter card. Language switching does not change metadata or canonical.
+The canonical site URL is `https://naoki-suehiro.github.io/naoki-journal`, configured in `content/journal.json` and overridable with `JOURNAL_SITE_URL`. ISSUE 001 uses its approved English title and subtitle for title/description and OGP, `ja_JP` for its initial OGP locale, and a summary-large-image Twitter card. Language switching does not change metadata or canonical.
 
 All current photos remain the existing illustrative Unsplash images, loaded from images.unsplash.com. They do not document the author's experiences and require an internet connection. ISSUE 001 keeps its existing photo, including for OGP. Replacement with photography from actual teaching is a separate phase. No dedicated OGP artwork, Article structured data or publication-date field is included in this release. There are no analytics, embedded widgets or font downloads. Existing author website links are retained.
 
 ## Deployment is a separate operation
 
-This phase prepares local files only. Remote setup, GitHub push, hosting, DNS and public release are separate tasks. None is performed by build or check.
+Build and check only prepare and validate files. The repository now has a GitHub Pages deployment workflow; pushing main triggers it. DNS and custom-domain configuration remain separate tasks.
 
 After local review, freeze the approved release in Git. Then, only as a separately authorized operation, configure a dedicated journal repository/hosting environment and deploy the output from that revision. Keep any preview private; avoid connecting a push-triggered production deployment before release is approved. Host `dist/` with directory-index support, HTTPS, the journal's own domain and a custom 404 handler that serves `404.html` with HTTP status 404. Python's local server does not automatically use the custom 404 page for missing routes; inspect `/404.html` locally and verify the actual fallback on the selected host.
 
 Before public release, confirm metadata, six sitemap URLs, robots.txt, image availability and the complete reading path. Production hosting, domain ownership and DNS must be verified separately. The author's official site is outside this project's editing and deployment scope.
+
+## GitHub Pages project paths
+
+The existing `.github/workflows/main.yml` builds and deploys on pushes to `main`. Its build job sets `JOURNAL_BASE_PATH=/naoki-journal` and `JOURNAL_SITE_URL=https://naoki-suehiro.github.io/naoki-journal` for both build and check. All internal links, CSS, JavaScript and favicon paths include the mount prefix. External photos and external website links are unchanged. Canonical, OGP URL, sitemap and the sitemap reference in robots.txt use the full site URL.
+
+For the existing root-based local preview, use the ordinary build/check commands above with these environment variables unset. To reproduce the Pages mount locally:
+
+```sh
+JOURNAL_BASE_PATH=/naoki-journal python3 scripts/build.py
+JOURNAL_BASE_PATH=/naoki-journal python3 scripts/check.py
+mkdir -p /tmp/naoki-journal-preview
+ln -sfn "$PWD/dist" /tmp/naoki-journal-preview/naoki-journal
+python3 -m http.server 8003 --bind 127.0.0.1 --directory /tmp/naoki-journal-preview
+```
+
+Open http://127.0.0.1:8003/naoki-journal/. Run `python3 scripts/test_paths.py` to test both mount configurations in temporary directories, including a regression test that rejects a broken root-relative asset URL. For a future custom-domain deployment, change the workflow site URL and base path together (empty base path for a domain root).
+
+`404.html` uses mount-prefixed assets and HOME links, so they also work when Pages serves it for an unknown nested URL. The language buttons only change visibility; they do not construct URLs. The generated project-level robots.txt contains the correct sitemap URL, but crawlers look for robots.txt at the host root, not `/naoki-journal/robots.txt`. This project does not alter the host-root site; forthcoming articles retain their own noindex metadata.

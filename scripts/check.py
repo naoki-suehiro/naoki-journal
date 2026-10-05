@@ -4,8 +4,16 @@ import json
 from pathlib import Path
 from urllib.parse import urlsplit
 from xml.etree import ElementTree
+from site_config import site_config
 
 ROOT = Path(__file__).resolve().parents[1] / 'dist'
+data = json.loads((ROOT.parent / 'content/journal.json').read_text())
+base_url, base_path = site_config(data)
+
+def local_file(url_path):
+    assert url_path.startswith(base_path + '/'), f'URL outside base path: {url_path}'
+    return ROOT / url_path[len(base_path):].lstrip('/')
+
 class Document(HTMLParser):
     def __init__(self):
         super().__init__()
@@ -23,9 +31,12 @@ class Document(HTMLParser):
             self.elements[a['id']] = a
         if tag == 'html': self.html_lang = a.get('lang')
         if tag == 'script': self.resources.append(a.get('src', ''))
-        if tag == 'link' and a.get('rel') == 'stylesheet': self.resources.append(a['href'])
+        if tag == 'link' and a.get('rel') in ('stylesheet', 'icon'): self.resources.append(a['href'])
         if tag == 'h1': self.h1 += 1
-        if tag == 'img': assert a.get('alt') and a.get('width') and a.get('height'), 'Image needs alt and dimensions'
+        if tag == 'img':
+            assert a.get('alt') and a.get('width') and a.get('height'), 'Image needs alt and dimensions'
+            self.resources.append(a['src'])
+            self.resources.extend(item.strip().split()[0] for item in a.get('srcset', '').split(',') if item.strip())
         if tag == 'a': self.links.append(a.get('href', ''))
         if tag == 'meta': self.meta[a.get('name', a.get('property'))] = a.get('content')
         if tag == 'link' and a.get('rel') == 'canonical': self.canonical = a.get('href')
@@ -35,17 +46,21 @@ for path in ROOT.rglob('*.html'):
     doc = Document()
     doc.feed(path.read_text())
     assert doc.h1 == 1, str(path) + ': expected one h1'
-    assert doc.canonical
+    route = path.relative_to(ROOT).as_posix()
+    route = route[:-10] if route.endswith('index.html') else '404/'
+    assert doc.canonical == base_url + '/' + route
+    assert doc.meta['og:url'] == doc.canonical
     for key in ('description', 'viewport', 'og:title', 'og:image', 'robots'):
         assert doc.meta.get(key), key
     docs[path.resolve()] = doc
 for path, doc in docs.items():
     for resource in doc.resources:
-        assert (ROOT / resource.lstrip('/')).is_file(), f'Missing resource: {resource}'
+        if urlsplit(resource).scheme or urlsplit(resource).netloc: continue
+        assert local_file(resource).is_file(), f'Missing resource: {resource}'
     for link in doc.links:
         url = urlsplit(link)
         if url.scheme or url.netloc: continue
-        dest = ROOT / url.path.lstrip('/') if url.path else path
+        dest = local_file(url.path) if url.path else path
         if dest.is_dir(): dest = dest / 'index.html'
         assert dest.exists(), f'Broken link: {link} in {path}'
         if url.fragment: assert url.fragment in docs[dest.resolve()].ids, f'Missing anchor: {link}'
@@ -53,7 +68,6 @@ for path, doc in docs.items():
 data = json.loads((ROOT.parent / 'content/journal.json').read_text())
 sitemap = ElementTree.parse(ROOT / 'sitemap.xml')
 urls = [node.text for node in sitemap.findall('.//{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]
-base_url = data['url'].rstrip('/')
 expected_urls = {base_url + '/'} | {base_url + '/categories/' + field['id'] + '/' for field in data['fields']}
 expected_urls |= {base_url + '/stories/' + story['slug'] + '/' for story in data['stories'] if story['status'] == 'published'}
 assert len(urls) == len(set(urls)) and set(urls) == expected_urls, 'Unexpected sitemap URLs'
@@ -73,7 +87,7 @@ for story in data['stories']:
     if 'translations' not in story:
         continue
     assert doc.html_lang == 'ja'
-    assert doc.canonical == data['url'].rstrip('/') + '/stories/' + story['slug'] + '/'
+    assert doc.canonical == base_url + '/stories/' + story['slug'] + '/'
     for language in ('ja', 'en'):
         panel = doc.elements['article-' + language]
         button = doc.elements['language-' + language]

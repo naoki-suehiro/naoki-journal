@@ -18,6 +18,9 @@ concurrency:
 jobs:
   build:
     runs-on: ubuntu-latest
+    env:
+      JOURNAL_BASE_PATH: /naoki-journal
+      JOURNAL_SITE_URL: https://naoki-suehiro.github.io/naoki-journal
 
     steps:
       - name: Checkout
@@ -33,6 +36,9 @@ jobs:
 
       - name: Check journal
         run: python3 scripts/check.py
+
+      - name: Test local and project paths
+        run: python3 scripts/test_paths.py
 
       - name: Setup Pages
         uses: actions/configure-pages@v5
