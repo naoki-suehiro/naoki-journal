@@ -31,6 +31,6 @@ with tempfile.TemporaryDirectory(prefix='journal-paths-') as tmp:
     for path, local in outputs[0].items():
         pages = outputs[1][path]
         if path.endswith('.html'):
-            pages = pages.replace(b'href="/naoki-journal/', b'href="/').replace(b'src="/naoki-journal/', b'src="/')
+            pages = pages.replace(b'href="/naoki-journal/', b'href="/').replace(b'src="/naoki-journal/', b'src="/').replace(b'poster="/naoki-journal/', b'poster="/')
         assert pages == local, 'Unexpected content difference: ' + path
 print('PASS: root/project builds match except URL prefixes; broken paths are rejected.')

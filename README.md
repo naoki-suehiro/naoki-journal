@@ -77,3 +77,7 @@ python3 -m http.server 8003 --bind 127.0.0.1 --directory /tmp/naoki-journal-prev
 Open http://127.0.0.1:8003/naoki-journal/. Run `python3 scripts/test_paths.py` to test both mount configurations in temporary directories, including a regression test that rejects a broken root-relative asset URL. For a future custom-domain deployment, change the workflow site URL and base path together (empty base path for a domain root).
 
 `404.html` uses mount-prefixed assets and HOME links, so they also work when Pages serves it for an unknown nested URL. The language buttons only change visibility; they do not construct URLs. The generated project-level robots.txt contains the correct sitemap URL, but crawlers look for robots.txt at the host root, not `/naoki-journal/robots.txt`. This project does not alter the host-root site; forthcoming articles retain their own noindex metadata.
+
+## Interview 001
+
+The home page includes Starting Again with the approved bilingual MP4, a poster frame, and a modal player. The player starts only after activation, supports native controls and inline mobile playback, and stops/resets on close or Escape. Without JavaScript or dialog support, the watch link opens the MP4 directly. The background essay is not yet available and is not linked. Video and poster resources are validated by check.py for both root and Pages paths.

@@ -30,6 +30,9 @@ class Document(HTMLParser):
             self.ids.add(a['id'])
             self.elements[a['id']] = a
         if tag == 'html': self.html_lang = a.get('lang')
+        if tag in ('video', 'source'):
+            if a.get('src'): self.resources.append(a['src'])
+            if a.get('poster'): self.resources.append(a['poster'])
         if tag == 'script': self.resources.append(a.get('src', ''))
         if tag == 'link' and a.get('rel') in ('stylesheet', 'icon'): self.resources.append(a['href'])
         if tag == 'h1': self.h1 += 1
