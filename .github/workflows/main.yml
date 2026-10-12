@@ -19,8 +19,8 @@ jobs:
   build:
     runs-on: ubuntu-latest
     env:
-  JOURNAL_BASE_PATH: ""
-  JOURNAL_SITE_URL: https://naokijournal.com
+      JOURNAL_BASE_PATH: ""
+      JOURNAL_SITE_URL: https://naokijournal.com
 
     steps:
       - name: Checkout
