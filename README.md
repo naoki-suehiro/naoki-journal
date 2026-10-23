@@ -44,13 +44,13 @@ Every story needs a unique lowercase hyphenated `slug`, `title`, valid `field`, 
 - `published`: requires body text or validated bilingual copy, generates `index, follow`, `og:type=article` and a sitemap entry. The home feature CTA becomes READ THE STORY.
 - `forthcoming`: generates `noindex, follow` and is excluded from the sitemap. Unwritten stories display a FORTHCOMING notice. Their placeholder titles and photos are retained. A completed bilingual draft can also stay forthcoming while showing its copy locally.
 
-The current sitemap contains six URLs: HOME, four category pages and ISSUE 001. The other four articles remain accessible as forthcoming pages but are not indexing targets. robots.txt allows crawling and points to the sitemap; per-page metadata controls article indexing.
+The current sitemap contains three URLs: HOME, the Global Workforce category and ISSUE 001. Categories with only forthcoming articles stay accessible with noindex, follow until an article is published. The other four articles remain accessible as forthcoming pages but are not indexing targets. robots.txt allows crawling and points to the sitemap; per-page metadata controls article indexing.
 
 ## Metadata and photography
 
-The canonical site URL is `https://naoki-suehiro.github.io/naoki-journal`, configured in `content/journal.json` and overridable with `JOURNAL_SITE_URL`. ISSUE 001 uses its approved English title and subtitle for title/description and OGP, `ja_JP` for its initial OGP locale, and a summary-large-image Twitter card. Language switching does not change metadata or canonical.
+The canonical site URL is `https://naokijournal.com`, configured in `content/journal.json` and overridable with `JOURNAL_SITE_URL`. ISSUE 001 uses its approved English title and subtitle for title/description and OGP, `ja_JP` for its initial OGP locale, and a summary-large-image Twitter card. Language switching does not change metadata or canonical.
 
-All current photos remain the existing illustrative Unsplash images, loaded from images.unsplash.com. They do not document the author's experiences and require an internet connection. ISSUE 001 keeps its existing photo, including for OGP. Replacement with photography from actual teaching is a separate phase. No dedicated OGP artwork, Article structured data or publication-date field is included in this release. There are no analytics, embedded widgets or font downloads. Existing author website links are retained.
+All current photos remain the existing illustrative Unsplash images, loaded from images.unsplash.com. They do not document the author's experiences and require an internet connection. ISSUE 001 keeps its existing photo, including for OGP. Replacement with photography from actual teaching is a separate phase. Person, WebSite, WebPage, BreadcrumbList and published BlogPosting JSON-LD identify the author through https://naokisuehiro.com/#person. Publication dates are omitted because exact article dates have not been verified. No dedicated OGP artwork is included. There are no analytics, embedded widgets or font downloads. Existing author website links are retained.
 
 ## Deployment is a separate operation
 
@@ -62,7 +62,7 @@ Before public release, confirm metadata, six sitemap URLs, robots.txt, image ava
 
 ## GitHub Pages project paths
 
-The existing `.github/workflows/main.yml` builds and deploys on pushes to `main`. Its build job sets `JOURNAL_BASE_PATH=/naoki-journal` and `JOURNAL_SITE_URL=https://naoki-suehiro.github.io/naoki-journal` for both build and check. All internal links, CSS, JavaScript and favicon paths include the mount prefix. External photos and external website links are unchanged. Canonical, OGP URL, sitemap and the sitemap reference in robots.txt use the full site URL.
+The existing `.github/workflows/main.yml` builds and deploys on pushes to `main`. Its build job sets `JOURNAL_BASE_PATH=""` and `JOURNAL_SITE_URL=https://naokijournal.com` for both build and check. All internal links, CSS, JavaScript and favicon paths include the mount prefix. External photos and external website links are unchanged. Canonical, OGP URL, sitemap and the sitemap reference in robots.txt use the full site URL.
 
 For the existing root-based local preview, use the ordinary build/check commands above with these environment variables unset. To reproduce the Pages mount locally:
 
@@ -81,3 +81,7 @@ Open http://127.0.0.1:8003/naoki-journal/. Run `python3 scripts/test_paths.py` t
 ## Interview 001
 
 The home page includes Starting Again with the approved bilingual MP4, a poster frame, and a modal player. The player starts only after activation, supports native controls and inline mobile playback, and stops/resets on close or Escape. Without JavaScript or dialog support, the watch link opens the MP4 directly. The background essay is not yet available and is not linked. Video and poster resources are validated by check.py for both root and Pages paths.
+
+## SEO maintenance — 2026-10-23
+
+The public domain is naokijournal.com (GitHub Pages custom domain; HTTPS enforced). The build writes CNAME as well as canonical URLs, robots.txt and sitemap.xml. Japanese search descriptions and the author’s Japanese name connect the journal to the official site. Published article pages include an author and contact path. Existing article copy and forthcoming URLs are preserved. The generated checker validates JSON-LD identity, publication-only category indexing and the custom domain.

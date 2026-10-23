@@ -33,7 +33,7 @@ class Document(HTMLParser):
         if tag in ('video', 'source'):
             if a.get('src'): self.resources.append(a['src'])
             if a.get('poster'): self.resources.append(a['poster'])
-        if tag == 'script': self.resources.append(a.get('src', ''))
+        if tag == 'script' and a.get('src'): self.resources.append(a['src'])
         if tag == 'link' and a.get('rel') in ('stylesheet', 'icon'): self.resources.append(a['href'])
         if tag == 'h1': self.h1 += 1
         if tag == 'img':
@@ -71,7 +71,7 @@ for path, doc in docs.items():
 data = json.loads((ROOT.parent / 'content/journal.json').read_text())
 sitemap = ElementTree.parse(ROOT / 'sitemap.xml')
 urls = [node.text for node in sitemap.findall('.//{http://www.sitemaps.org/schemas/sitemap/0.9}loc')]
-expected_urls = {base_url + '/'} | {base_url + '/categories/' + field['id'] + '/' for field in data['fields']}
+expected_urls = {base_url + '/'} | {base_url + '/categories/' + field['id'] + '/' for field in data['fields'] if any(s['status'] == 'published' and s['field'] == field['id'] for s in data['stories'])}
 expected_urls |= {base_url + '/stories/' + story['slug'] + '/' for story in data['stories'] if story['status'] == 'published'}
 assert len(urls) == len(set(urls)) and set(urls) == expected_urls, 'Unexpected sitemap URLs'
 assert (ROOT / 'robots.txt').read_text() == 'User-agent: *\nAllow: /\nSitemap: ' + base_url + '/sitemap.xml\n'
@@ -105,3 +105,23 @@ for story in data['stories']:
     print('PASS: bilingual language markup, no-JS initial state, controls and canonical:', story['slug'])
 print(f'PASS: publication metadata, sitemap ({len(urls)} URLs), robots.txt, 404 and favicon.')
 print(f'PASS: {len(docs)} HTML files; internal links, anchors, H1, metadata, image alt and dimensions.')
+
+import re
+for path, doc in docs.items():
+    blocks = re.findall(r'<script type="application/ld\+json">(.*?)</script>', path.read_text(), re.S)
+    assert len(blocks) == 1, f'Missing structured data: {path}'
+    graph = json.loads(blocks[0])['@graph']
+    person = next(entity for entity in graph if entity['@type'] == 'Person')
+    assert person['@id'] == 'https://naokisuehiro.com/#person'
+    assert person['name'] == '末広尚希'
+    articles = [entity for entity in graph if entity['@type'] == 'BlogPosting']
+    assert bool(articles) == (doc.meta['og:type'] == 'article')
+    if articles:
+        assert articles[0]['url'] == doc.canonical
+        assert articles[0]['author']['@id'] == person['@id']
+    if '/categories/' in str(path):
+        field_id = path.parent.name
+        has_published = any(s['status'] == 'published' and s['field'] == field_id for s in data['stories'])
+        assert doc.meta['robots'] == ('index, follow' if has_published else 'noindex, follow')
+assert (ROOT / 'CNAME').read_text().strip() == 'naokijournal.com'
+print('PASS: author identity, JSON-LD, published-only category indexing and custom domain.')

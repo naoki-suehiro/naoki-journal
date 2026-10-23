@@ -1,9 +1,9 @@
 {
   "name": "NAOKI JOURNAL",
-  "url": "https://naoki-suehiro.github.io/naoki-journal",
+  "url": "https://naokijournal.com",
   "launchDate": "2026-10-01",
   "author": "Naoki Suehiro",
-  "description": "Thoughts on Education, Work, Life, and the World. An independent journal by Naoki Suehiro.",
+  "description": "末広尚希（Naoki Suehiro）が、教育・外国人雇用・日本語教育・組織・レジリエンスを考える独立ジャーナル。沖縄から日本、アジアへ。経験から生まれる問いを、日本語と英語で綴ります。",
   "fields": [
     {"id": "education", "name": "EDUCATION", "topics": "Children / Early Childhood Education / Parenting / Resilience / Learning"},
     {"id": "global-workforce", "name": "GLOBAL WORKFORCE", "topics": "Foreign Workforce / Japanese Language Education / Organizations / Japan × ASEAN"},
@@ -25,6 +25,8 @@
       "subtitle": "Language is more than an ability required for work. It is part of the infrastructure that allows people to live, belong, and connect.",
       "issueLabel": "ISSUE 001",
       "defaultLanguage": "ja",
+      "seoTitle": "日本語はスキルではなく、インフラである｜末広尚希",
+      "description": "外国人が日本で働き、暮らし、社会とつながるために、日本語教育は何を支えられるのか。末広尚希（Naoki Suehiro）が、日本語を生活と職場をつなぐ基盤として考える。",
       "translations": {
         "ja": [
           {"type": "lead", "content": [{"text": "言葉は、働くための「能力」だけではない。"}]},

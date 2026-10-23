@@ -17,3 +17,8 @@
 .interview-dialog video{display:block;width:100%;max-height:78dvh;background:#000}
 .interview-is-open{overflow:hidden}
 @media(max-width:700px){.interview{grid-template-columns:1fr;gap:24px;padding-top:32px;padding-bottom:40px}.interview-copy h2{margin-top:16px}.interview-caption{margin-top:16px}.interview-dialog{padding:10px}.interview-dialog h2{font-size:12px}}
+
+.author-name-ja{display:block;font-size:16px;letter-spacing:.08em;margin-top:14px;font-weight:400}
+.article-author{margin-top:48px;padding-top:24px;border-top:1px solid #ccc7bb;font-size:14px;line-height:1.9}
+.article-author .text-link{display:inline-block;margin:16px 24px 0 0;font-size:12px;letter-spacing:.02em}
+.article-summary{font-size:15px;line-height:2;margin-top:24px;max-width:46em}

@@ -78,10 +78,11 @@ def bilingual_article(story):
 <footer class="article-colophon" lang="en">{note}<p>NAOKI JOURNAL · {e(story['issueLabel'])}</p></footer>
 </section>''')
     return f'''<article class="article-page bilingual-article" data-bilingual-article>
+<nav class="breadcrumbs" aria-label="Breadcrumb" lang="en"><a href="{base_path}/">NAOKI JOURNAL</a><span aria-hidden="true"> / </span><a href="{base_path}/categories/{story['field']}/">{e(fields[story['field']]['name'])}</a></nav>
 <header class="article-heading" lang="en">
 <p class="category">{e(story['issueLabel'])} · {e(fields[story['field']]['name'])}</p>
 <h1>{e(story['articleTitle'])}</h1>
-<p class="article-subtitle">{e(story['subtitle'])}</p>
+<p class="article-subtitle">{e(story['subtitle'])}</p><p class="article-summary" lang="ja">{e(story.get('description', ''))}</p>
 </header>
 <div class="language-switch" role="group" aria-label="本文の言語 / Article language" hidden>
 <button type="button" id="language-ja" lang="ja" aria-pressed="true" aria-controls="article-ja" data-language="ja">日本語</button>
@@ -90,6 +91,7 @@ def bilingual_article(story):
 </div>
 <div class="article-image" lang="en">{img(story,True)}</div>
 {''.join(bodies)}
+<aside class="article-author"><p>末広尚希 / Naoki Suehiro</p><p>教育、組織、国境を越える仕事について、考え続ける。</p><a class="text-link" href="https://naokisuehiro.com/">著者の公式サイト</a><a class="text-link" href="https://naokisuehiro.com/contact">講演・取材・教育・組織のご相談</a></aside>
 <a class="text-link article-back" lang="en" href="{base_path}/">← BACK TO THE JOURNAL</a>
 </article>'''
 
@@ -100,7 +102,43 @@ def page(path, title, content, description=None, noindex=False, story=None, bili
     canonical = site_url + '/' + (path + '/' if path else '')
     image_story = story or next(s for s in stories if s.get('featured'))
     article_assets = f'\n<link rel="stylesheet" href="{base_path}/assets/article.css">\n<script src="{base_path}/assets/article-language.js" defer></script>' if bilingual else ''
-    rendered = base.substitute(title=e(title), description=e(description or data['description']), canonical=e(canonical), content=content, robots='noindex, follow' if noindex else 'index, follow', og_type='article' if story and story['status'] == 'published' else 'website', og_image=e(photo(image_story,1600)), og_alt=e(image_story['alt']), document_lang='ja' if bilingual else 'en', og_locale='ja_JP' if bilingual else 'en_US', chrome_lang=' lang="en"' if bilingual else '', article_assets=article_assets, base_path=e(base_path))
+    person_id = 'https://naokisuehiro.com/#person'
+    website_id = site_url + '/#website'
+    graph = [
+        {'@type': 'Person', '@id': person_id, 'name': '末広尚希',
+         'alternateName': 'Naoki Suehiro', 'url': 'https://naokisuehiro.com/'},
+        {'@type': 'WebSite', '@id': website_id, 'url': site_url + '/',
+         'name': data['name'], 'inLanguage': ['ja', 'en'],
+         'publisher': {'@id': person_id}}
+    ]
+    page_entity = {'@type': 'WebPage', '@id': canonical + '#webpage',
+                   'url': canonical, 'name': title,
+                   'description': description or data['description'],
+                   'isPartOf': {'@id': website_id},
+                   'inLanguage': ['ja', 'en'] if bilingual else 'en'}
+    if story and story['status'] == 'published':
+        article = {'@type': 'BlogPosting', '@id': canonical + '#article',
+                   'url': canonical, 'headline': story.get('articleTitle', story['title']),
+                   'description': description or data['description'],
+                   'image': photo(story, 1600), 'author': {'@id': person_id},
+                   'publisher': {'@id': person_id},
+                   'inLanguage': ['ja', 'en'] if bilingual else 'en',
+                   'mainEntityOfPage': {'@id': canonical + '#webpage'},
+                   'isPartOf': {'@id': website_id}}
+        graph.append(article)
+        page_entity['mainEntity'] = {'@id': canonical + '#article'}
+    if path and path != '404':
+        crumbs = [{'@type': 'ListItem', 'position': 1, 'name': data['name'], 'item': site_url + '/'}]
+        if story:
+            field = fields[story['field']]
+            crumbs.append({'@type': 'ListItem', 'position': 2, 'name': field['name'],
+                           'item': site_url + '/categories/' + field['id'] + '/'})
+        crumbs.append({'@type': 'ListItem', 'position': len(crumbs) + 1, 'name': title, 'item': canonical})
+        graph.append({'@type': 'BreadcrumbList', '@id': canonical + '#breadcrumbs', 'itemListElement': crumbs})
+        page_entity['breadcrumb'] = {'@id': canonical + '#breadcrumbs'}
+    graph.append(page_entity)
+    structured_data = json.dumps({'@context': 'https://schema.org', '@graph': graph}, ensure_ascii=False).replace('<', r'\u003c')
+    rendered = base.substitute(structured_data=structured_data,title=e(title), description=e(description or data['description']), canonical=e(canonical), content=content, robots='noindex, follow' if noindex else 'index, follow', og_type='article' if story and story['status'] == 'published' else 'website', og_image=e(photo(image_story,1600)), og_alt=e(image_story['alt']), document_lang='ja' if bilingual else 'en', og_locale='ja_JP' if bilingual else 'en_US', chrome_lang=' lang="en"' if bilingual else '', article_assets=article_assets, base_path=e(base_path))
     target.write_text(rendered)
     if not noindex:
         pages.append(canonical)
@@ -121,7 +159,7 @@ content = f'''
 <section class="section wrap" id="stories" aria-labelledby="stories-title"><div class="section-heading"><h2 class="section-label" id="stories-title">FORTHCOMING</h2></div><div class="story-grid">{latest}</div></section>
 <section class="section fields wrap" id="fields" aria-labelledby="fields-title"><div class="section-heading"><h2 class="section-label" id="fields-title">EXPLORE BY FIELD</h2><p>Four fields. One unfolding perspective.</p></div>{field_links}</section>
 <section class="statement" aria-labelledby="statement-title"><div class="wrap statement-inner"><p class="section-label">THE JOURNAL STATEMENT</p><div><h2 id="statement-title">We live first.<br>Then we find the words.</h2><p>Experience becomes a question.<br>A question becomes an idea.<br>And sometimes, an idea becomes a philosophy.</p><p class="closing">NAOKI JOURNAL exists to preserve that journey.</p></div></div></section>
-<section class="author wrap" id="about" aria-labelledby="author-title"><p class="section-label">ABOUT THE AUTHOR</p><div class="author-content"><div><h2 id="author-title">NAOKI SUEHIRO</h2><p class="author-roles">Educator.<br>Global Workforce Architect.<br>Writer.</p></div><div class="author-bio"><p>NAOKI JOURNAL is an independent journal by Naoki Suehiro — a collection of thoughts, questions, experiences, and stories about education, work, people, resilience, Japan, and Asia.</p><a class="text-link" href="https://naokisuehiro.com">VISIT NAOKI SUEHIRO <span aria-hidden="true">→</span></a></div></div></section>'''
+<section class="author wrap" id="about" aria-labelledby="author-title"><p class="section-label">ABOUT THE AUTHOR</p><div class="author-content"><div><h2 id="author-title">NAOKI SUEHIRO<span class="author-name-ja" lang="ja">末広尚希</span></h2><p class="author-roles">Educator.<br>Global Workforce Architect.<br>Writer.</p></div><div class="author-bio"><p>NAOKI JOURNAL is an independent journal by Naoki Suehiro — a collection of thoughts, questions, experiences, and stories about education, work, people, resilience, Japan, and Asia.</p><a class="text-link" href="https://naokisuehiro.com"><span lang="ja">末広尚希 公式サイト</span> / NAOKI SUEHIRO <span aria-hidden="true">→</span></a></div></div></section>'''
 interview = f'''<section class="interview wrap" aria-labelledby="interview-title">
 <div class="interview-copy"><p class="eyebrow">INTERVIEW 001 / OCTOBER 2026</p><h2 id="interview-title">Starting Again</h2><p lang="ja">もう一度、歩み出す。</p><p class="interview-caption">NAOKI SUEHIRO · ENGLISH AUDIO<br><span lang="ja">日英字幕付き</span> / JAPANESE &amp; ENGLISH SUBTITLES</p></div>
 <a class="interview-play" href="{base_path}/assets/NAOKI_Interview_001_Bilingual.mp4" data-interview-open aria-label="Watch the interview / インタビューを見る"><img src="{base_path}/assets/interview-001-poster.jpg" alt="Naoki Suehiro speaking in Interview 001" width="1280" height="720" loading="lazy"><span class="interview-play-label"><span aria-hidden="true">▶</span> WATCH THE INTERVIEW <span lang="ja">インタビューを見る</span></span></a>
@@ -129,20 +167,22 @@ interview = f'''<section class="interview wrap" aria-labelledby="interview-title
 <dialog class="interview-dialog" aria-labelledby="interview-dialog-title"><div class="interview-dialog-heading"><h2 id="interview-dialog-title">Starting Again · Interview 001</h2><button type="button" data-interview-close aria-label="Close video / 動画を閉じる">CLOSE ×</button></div><video controls playsinline preload="none" poster="{base_path}/assets/interview-001-poster.jpg"><source src="{base_path}/assets/NAOKI_Interview_001_Bilingual.mp4" type="video/mp4"><a href="{base_path}/assets/NAOKI_Interview_001_Bilingual.mp4">Watch the interview</a></video></dialog>
 <script src="{base_path}/assets/interview.js" defer></script>'''
 content = content.replace('<section class="featured wrap"', interview + '<section class="featured wrap"', 1)
-page('', 'NAOKI JOURNAL — Experience becomes philosophy', content)
+page('', 'NAOKI JOURNAL｜末広尚希・Naoki Suehiro — 教育・仕事・人生の考察', content)
 for story in stories:
     forthcoming = story['status'] == 'forthcoming'
     if 'translations' in story:
-        page('stories/' + story['slug'], story['articleTitle'] + ' — NAOKI JOURNAL', bilingual_article(story), description=story['subtitle'], noindex=forthcoming, story=story, bilingual=True)
+        page('stories/' + story['slug'], story.get('seoTitle', story['articleTitle']) + ' — NAOKI JOURNAL', bilingual_article(story), description=story.get('description', story['subtitle']), noindex=forthcoming, story=story, bilingual=True)
         continue
     body = '<aside class="notice"><p class="eyebrow">FORTHCOMING</p><p>This story is being prepared for NAOKI JOURNAL.</p><p lang="ja">この記事は現在準備中です。掲載タイトル・写真は仮のものです。</p></aside>' if forthcoming else ''.join('<p>' + e(p) + '</p>' for p in story['body'])
     article = f'<article class="article-page"><a class="text-link" href="{base_path}/#stories">← BACK TO THE JOURNAL</a><p class="category" style="margin-top:40px">{e(fields[story["field"]]["name"])}</p><h1>{e(story["title"])}</h1><p class="eyebrow">BY NAOKI SUEHIRO</p><div class="article-image">{img(story,True)}</div>{body}</article>'
     page('stories/' + story['slug'], story['title'] + ' — NAOKI JOURNAL', article, noindex=forthcoming, story=story)
 for field in data['fields']:
     listing = ''.join(card(s) for s in stories if s['field'] == field['id'])
-    page('categories/' + field['id'], field['name'] + ' — NAOKI JOURNAL', f'<section class="archive section wrap"><h1 class="archive-title">{e(field["name"])}</h1><p class="archive-intro">{e(field["topics"])}</p><div class="story-grid">{listing}</div></section>')
+    has_published = any(s['status'] == 'published' and s['field'] == field['id'] for s in stories)
+    page('categories/' + field['id'], field['name'] + ' — NAOKI JOURNAL', f'<section class="archive section wrap"><h1 class="archive-title">{e(field["name"])}</h1><p class="archive-intro">{e(field["topics"])}</p><div class="story-grid">{listing}</div></section>', description=field['name'] + 'についての考察。' + field['topics'] + '。末広尚希（Naoki Suehiro）のNAOKI JOURNAL。', noindex=not has_published)
 page('404', 'Page not found — NAOKI JOURNAL', f'<section class="article-page"><p class="eyebrow">404</p><h1>A page yet to be found.</h1><p>The page you’re looking for isn’t here.</p><a class="text-link" href="{base_path}/">RETURN TO THE JOURNAL →</a></section>', noindex=True)
 shutil.copyfile(OUT / '404/index.html', OUT / '404.html')
+(OUT / 'CNAME').write_text('naokijournal.com\n')
 (OUT / 'robots.txt').write_text('User-agent: *\nAllow: /\nSitemap: ' + site_url + '/sitemap.xml\n')
 (OUT / 'sitemap.xml').write_text('<?xml version="1.0" encoding="UTF-8"?>\n<urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' + ''.join('<url><loc>' + e(url) + '</loc></url>' for url in pages) + '</urlset>\n')
 print('Built 11 pages, 404.html, assets, robots.txt and sitemap.xml in dist/')
