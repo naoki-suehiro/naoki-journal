@@ -12,10 +12,934 @@
   ],
   "stories": [
     {
+      "slug": "from-hiring-to-growing",
+      "title": "From a Society That Hires People to One That Helps Them Grow",
+      "field": "global-workforce",
+      "featured": true,
+      "status": "published",
+      "issue": "ISSUE 002 / OCTOBER 2026",
+      "image": "photo-1521737711867-e3b97375f902",
+      "alt": "People gathered around a table in a shared workplace",
+      "body": [],
+      "articleTitle": "From a Society That Hires People to One That Helps Them Grow",
+      "subtitle": "Rethinking International Employment Through Workplace Environments, Not Headcount",
+      "issueLabel": "ISSUE 002",
+      "defaultLanguage": "ja",
+      "seoTitle": "人を採用する社会から、人が育つ社会へ。｜末広尚希",
+      "description": "外国人雇用を「人数」ではなく「環境」から考える。採用、日本語教育、組織づくりを通じて、人が育ち続けられる社会を考える。",
+      "translations": {
+        "ja": [
+          {
+            "type": "lead",
+            "content": [
+              {
+                "text": "人を採用する社会から、人が育つ社会へ。",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "lead",
+            "content": [
+              {
+                "text": "外国人雇用を「人数」ではなく「環境」から考える"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "content": [
+              {
+                "text": "人手不足を解消すれば、問題は解決するのだろうか。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "日本の多くの産業で、人手不足への対応が課題となっている。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "介護、宿泊、製造、飲食。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "外国人材の受け入れは、こうした産業を支える重要な選択肢の一つだ。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "しかし、ここで考えたいことがある。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "人を採用することと、その人が働き続けられることは、同じではない。",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "採用が成功しても、職場に安心して相談できる相手がいなければどうだろう。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "日本語を学んでいても、仕事の指示を十分に理解できなければどうだろう。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "困ったときに助けを求めることさえ難しい環境だったら。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "採用人数が増えても、組織の持続可能性が高まるとは限らない。"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "content": [
+              {
+                "text": "日本語教育は、福利厚生ではない。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "私は、日本語教育を単なる語学研修として捉えるべきではないと考えている。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "言葉は、人と人をつなぐための基盤だからだ。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "例えば、介護現場において「分かりません」と伝えられること。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "指示を確認できること。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "自分の判断に不安があるとき、周囲に相談できること。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "これらは日本語能力だけでなく、組織の安全性や信頼関係にも関わっている。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "つまり、外国人材への日本語教育は、本人だけの努力に委ねるものではない。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "受け入れる企業自身が、組織運営の一部として設計する必要がある。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Japanese language is not a skill. It is infrastructure.",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "日本語は、単なる技能ではない。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "人が働き、学び、社会とつながるためのインフラなのだ。"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "content": [
+              {
+                "text": "失敗しても、戻れる組織をつくる。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "教育の世界には、失敗を成長の機会として捉える考え方がある。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "これは大人の組織にも通じる。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "仕事を間違えたとき、すぐに叱責される環境と、原因を一緒に考えられる環境。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "分からないことを隠さなければならない職場と、安心して質問できる職場。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "どちらが人を育てるだろうか。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "もちろん、失敗を認めることと、責任を曖昧にすることは違う。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "大切なのは、責任を明確にしながらも、学び直し、やり直せる仕組みを持つことだ。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "私はこれを、"
+              },
+              {
+                "text": "「戻れる構造」",
+                "strong": true
+              },
+              {
+                "text": "と考えている。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "人が育つ組織には、必ずしも失敗の少ない人ばかりがいるわけではない。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "失敗から立ち直ることのできる環境がある。"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "content": [
+              {
+                "text": "企業が取り組める3つのこと"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "外国人材の受け入れを考える企業には、まず次の3つを提案したい。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "第一に、採用後の育成計画を採用前から設計すること。",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "入社後に何を学び、誰が支援し、どのように成長を確認するのか。採用活動と育成計画を切り離さない。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "第二に、相談できる関係性をつくること。",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "制度として相談窓口を設けるだけでは十分ではない。実際に相談できる雰囲気と、相談後に適切に対応する仕組みが必要だ。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "第三に、受け入れる側も学び続けること。",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "外国人材だけに日本の職場への適応を求めるのではなく、企業側も異文化理解や伝え方を学ぶ。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "この相互の学びが、持続可能な組織づくりにつながる。"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "content": [
+              {
+                "text": "沖縄からASEANへ。そして、これからの社会へ。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "沖縄とASEANをつなぐ外国人雇用の仕組みを考えるとき、目指したいのは単なる人材の移動ではない。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "働く人が能力を発揮し、受け入れる企業も成長する関係性だ。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "そのためには、採用、教育、組織づくりを一つの仕組みとして捉える必要がある。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "人を集めることだけに注目する社会から、人が育ち続けられる社会へ。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "人手不足の時代だからこそ、問われているのは人の数だけではなく、人を育てる社会の力なのではないだろうか。",
+                "strong": true
+              }
+            ]
+          }
+        ],
+        "en": [
+          {
+            "type": "heading",
+            "content": [
+              {
+                "text": "Will solving labor shortages solve the real problem?"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Across Japan, many industries are struggling with labor shortages."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Nursing care, hospitality, manufacturing, and food service."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Hiring people from overseas has become an important option for supporting these industries."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "But there is a question we need to ask."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Hiring someone and creating a workplace where that person can continue to work and grow are not the same thing.",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "What happens when a newly hired employee has no one they feel comfortable approaching?"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "What happens when someone studies Japanese but still struggles to understand instructions at work?"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "What if even asking for help feels difficult?"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Increasing the number of employees does not automatically make an organization more sustainable."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "content": [
+              {
+                "text": "Japanese language education is not an employee benefit."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "I do not believe Japanese language education should be treated as simply another form of language training."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Language is part of the foundation that connects people."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Consider a nursing care workplace."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Being able to say, \"I don't understand.\""
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Being able to confirm instructions."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Being able to ask colleagues for guidance when uncertain about a decision."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "These abilities are not only about language proficiency. They are also closely connected to workplace safety and trust."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "This means Japanese language education should not be left entirely to the efforts of international employees themselves."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Employers must design language education as an essential part of how their organizations operate."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Japanese language is not a skill. It is infrastructure.",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Japanese is more than an individual competency."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "It is infrastructure that enables people to work, learn, and connect with society."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "content": [
+              {
+                "text": "Building organizations where people can recover from mistakes."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "In education, mistakes are often understood as opportunities for growth."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "I believe the same principle applies to adults in the workplace."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Consider two different environments."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "One where employees are immediately criticized when they make mistakes, and another where colleagues work together to understand what went wrong."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "One where people feel they must hide what they do not know, and another where they can ask questions without fear."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Which environment is more likely to help people grow?"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Of course, accepting mistakes does not mean removing responsibility."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "What matters is maintaining clear accountability while creating opportunities to learn again and try again."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "I call this a \"structure that allows people to return\" — a system that gives people a path back to learning, confidence, and participation after setbacks.",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Organizations that develop people are not necessarily places where mistakes rarely happen."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "They are places where people have the opportunity and support to recover from them."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "content": [
+              {
+                "text": "Three things employers can do."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "For companies considering the employment of international workers, I would like to propose three practical steps."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "First, design employee development plans before recruitment begins.",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "What will employees learn after joining the organization?"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Who will support them?"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "How will their progress and development be evaluated?"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Recruitment and employee development should never be treated as separate processes."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Second, create relationships where people feel safe asking for help.",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Establishing a formal consultation desk is not enough."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Employees need an environment where they genuinely feel comfortable speaking up, along with reliable systems that respond appropriately when concerns are raised."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Third, employers must continue learning as well.",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "International employees should not be the only ones expected to adapt to Japanese workplaces."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Employers also need to develop intercultural understanding and improve how they communicate."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "This mutual process of learning is essential to building sustainable organizations."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "content": [
+              {
+                "text": "From Okinawa to ASEAN. And toward the society we want to build."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "When I think about connecting Okinawa and ASEAN through international employment, my goal is not simply to move workers across borders."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "It is to create relationships in which people can realize their potential while the organizations that welcome them grow alongside them."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "To achieve this, recruitment, education, and organizational development must be understood as parts of one connected system."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "We need to move beyond a society focused only on finding and hiring people."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "We need to build a society where people can continue to learn, contribute, and grow."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "In an age of labor shortages, perhaps the question we should be asking is not simply how many people we can hire, but how capable we are, as a society, of helping people grow.",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "signature",
+            "content": [
+              {
+                "text": "Naoki Suehiro"
+              }
+            ]
+          },
+          {
+            "type": "signature",
+            "content": [
+              {
+                "text": "Global Workforce Architect"
+              }
+            ]
+          },
+          {
+            "type": "signature",
+            "content": [
+              {
+                "text": "Okinawa, Japan"
+              }
+            ]
+          },
+          {
+            "type": "signature",
+            "content": [
+              {
+                "text": "NAOKI JOURNAL — Experience becomes philosophy."
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "slug": "language-as-infrastructure",
       "title": "Japanese Language Is Not a Skill. It Is Infrastructure.",
       "field": "global-workforce",
-      "featured": true,
+      "featured": false,
       "status": "published",
       "issue": "ISSUE 001 / OCTOBER 2026",
       "image": "photo-1519608487953-e999c86e7455",
