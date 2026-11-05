@@ -69,6 +69,8 @@ def render_blocks(blocks):
     return '\n'.join(rendered)
 
 def bilingual_article(story):
+    published_date = (f'<p class="eyebrow"><time datetime="{e(story["datePublished"])}">{e(story["datePublished"])}</time></p>'
+                      if story.get('datePublished') else '')
     bodies = []
     for language in ('ja', 'en'):
         hidden = '' if language == story['defaultLanguage'] else ' hidden'
@@ -81,6 +83,7 @@ def bilingual_article(story):
 <nav class="breadcrumbs" aria-label="Breadcrumb" lang="en"><a href="{base_path}/">NAOKI JOURNAL</a><span aria-hidden="true"> / </span><a href="{base_path}/categories/{story['field']}/">{e(fields[story['field']]['name'])}</a></nav>
 <header class="article-heading" lang="en">
 <p class="category">{e(story['issueLabel'])} · {e(fields[story['field']]['name'])}</p>
+{published_date}
 <h1>{e(story['articleTitle'])}</h1>
 <p class="article-subtitle">{e(story['subtitle'])}</p><p class="article-summary" lang="ja">{e(story.get('description', ''))}</p>
 </header>
@@ -125,6 +128,8 @@ def page(path, title, content, description=None, noindex=False, story=None, bili
                    'inLanguage': ['ja', 'en'] if bilingual else 'en',
                    'mainEntityOfPage': {'@id': canonical + '#webpage'},
                    'isPartOf': {'@id': website_id}}
+        if story.get('datePublished'):
+            article['datePublished'] = story['datePublished']
         graph.append(article)
         page_entity['mainEntity'] = {'@id': canonical + '#article'}
     if path and path != '404':

@@ -12,10 +12,1566 @@
   ],
   "stories": [
     {
+      "slug": "strong-workplaces-ask-for-help",
+      "title": "A Strong Workplace Makes It Safe to Ask for Help.",
+      "field": "global-workforce",
+      "featured": true,
+      "status": "published",
+      "issue": "ISSUE 003 / NOVEMBER 2026",
+      "datePublished": "2026-11-05",
+      "image": "photo-1521737711867-e3b97375f902",
+      "alt": "People gathered around a table in a shared workplace",
+      "body": [],
+      "articleTitle": "A Strong Workplace Makes It Safe to Ask for Help.",
+      "subtitle": "Designing Psychological Safety Through International Employment and Japanese Language Education",
+      "issueLabel": "ISSUE 003",
+      "defaultLanguage": "ja",
+      "seoTitle": "助けを求められる組織は、強い。｜末広尚希",
+      "description": "外国人雇用と日本語教育から考える、心理的安全性の設計。安心して質問でき、失敗から学び直せる「戻れる構造」を組織に実装する。",
+      "translations": {
+        "ja": [
+          {
+            "type": "lead",
+            "content": [
+              {
+                "text": "助けを求められる組織は、強い。",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "lead",
+            "content": [
+              {
+                "text": "外国人雇用と日本語教育から考える、心理的安全性の設計"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "A Strong Workplace Makes It Safe to Ask for Help.",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "content": [
+              {
+                "text": "「分かりません」と言える職場だろうか。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "職場で、こんな言葉を耳にすることがある。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "「分からなければ、聞いてください」"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "一見すると、当たり前の言葉だ。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "しかし、本当に大切なのは、その言葉を伝えたかどうかではない。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "相手が、安心して質問できる環境になっているかどうか。",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "例えば、外国人スタッフが仕事の指示を十分に理解できなかったとする。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "もう一度聞きたい。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "けれど、何度も質問すると迷惑をかけるのではないか。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "能力が低いと思われるのではないか。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "そんな不安から、質問をためらうこともあるだろう。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "このとき、問題を本人の日本語能力だけに求めてよいのだろうか。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "私は、そうは思わない。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "問われているのは、言語能力だけではなく、組織のあり方そのものだからだ。"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "content": [
+              {
+                "text": "日本語教育だけでは、解決できない問題がある。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "外国人材の受け入れにおいて、日本語教育は欠かせない。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "業務上の指示を理解すること。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "自分の考えを伝えること。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "困ったときに相談すること。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "これらは、安心して働くための重要な力だ。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "しかし、どれほど日本語を学んでも、質問すること自体が難しい職場では、その力を十分に発揮できない。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "言葉を学ぶ側の努力だけでなく、言葉を受け止める側の姿勢も必要になる。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "例えば、管理者が指示を短く明確に伝える。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "重要な内容は、相手の理解を確認する。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "質問されたときに、責めるのではなく、一緒に確認する。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "こうした日常的な行動が、職場のコミュニケーションを支えている。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "日本語教育は、本人の能力開発であると同時に、組織全体のコミュニケーション設計と結びつけるべきものだ。",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "私は、日本語教育を単なる福利厚生として捉えていない。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "それは、組織が機能するための基盤である。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Japanese language is not a skill. It is infrastructure."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "content": [
+              {
+                "text": "心理的安全性とは、優しくすることだけではない。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "心理的安全性という言葉がある。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "これは、単に仲良く働くことでも、厳しい指摘を避けることでもない。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "必要なときに質問し、意見を伝え、間違いを報告できる環境をつくることだ。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "特に介護現場では、この考え方が重要になる。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "利用者の安全に関わる情報を共有すること。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "自分の判断に不安があるとき、確認すること。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "小さな違和感を、周囲に伝えること。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "こうした行動が、日々の仕事の質を支えている。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "もし職員が、叱責を恐れて報告をためらうようになれば、組織は重要な情報を失う可能性がある。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "だからこそ、質問や報告を個人の勇気だけに任せてはいけない。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "安心して声を上げられる仕組みを、組織として設計する必要がある。",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "content": [
+              {
+                "text": "「戻れる構造」を組織に実装する。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "私は教育について考えるとき、「戻れる構造」を大切にしている。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "子どもが失敗したとき、すぐに答えを与えるのではなく、もう一度考える機会をつくる。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "挑戦がうまくいかなかったとき、失敗だけでその子を評価しない。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "そして、再び挑戦できる余白を残す。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "この考え方は、大人の組織にも通じる。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "もちろん、職場には責任がある。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "特に安全に関わる業務では、誤りを見過ごすことはできない。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "しかし、責任を明確にすることと、人を萎縮させることは違う。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "間違いが起きたときに原因を確認する。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "必要な指導を行う。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "再発防止の仕組みを整える。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "そして、本人が学び直せる機会をつくる。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "これが、私の考える「戻れる構造」の一つの形だ。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "失敗を許容することと、失敗を放置することは違う。",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "人が成長できる組織には、その両者を区別する設計が必要なのだと思う。"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "content": [
+              {
+                "text": "受け入れ企業が、明日から始められること。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "外国人材の受け入れを考える企業に、私は3つの取り組みを提案したい。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "第一に、質問できる時間を意図的につくること。",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "「いつでも聞いてください」と伝えるだけではなく、勤務の中に短い確認の時間を設ける。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "例えば、業務開始前に指示内容を確認し、終了後に困ったことを振り返る。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "質問することを特別な行動ではなく、日常の仕事の一部にする。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "第二に、管理者の伝え方を見直すこと。",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "日本語が十分に伝わらなかったとき、本人の理解力だけを問題にしない。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "指示が長すぎなかったか。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "専門用語を使いすぎていなかったか。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "相手が確認しやすい伝え方だったか。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "管理者自身も、コミュニケーションを学び続ける必要がある。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "第三に、失敗から学ぶ仕組みをつくること。",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "間違いを個人の責任だけで終わらせず、なぜ起きたのかを確認する。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "必要に応じて、指示の出し方や業務手順を改善する。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "そして、改善した内容を組織全体で共有する。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "この積み重ねが、働く人の成長と組織の信頼につながっていく。"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "content": [
+              {
+                "text": "沖縄とASEANをつなぐ、その先に。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "沖縄とASEANをつなぐ外国人雇用の仕組みを考えるとき、私は採用人数だけを成果の中心に置きたくない。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "何人採用できたか。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "何人が日本に来たか。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "もちろん、それらも重要な指標だ。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "しかし、それだけでは見えてこないものがある。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "働く人が安心して質問できているか。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "管理者との信頼関係が育っているか。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "日本語教育が、実際の仕事や生活につながっているか。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "そして、働く人が成長を実感できているか。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "こうした視点を持つことが、持続可能な外国人雇用につながるのではないだろうか。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "人を採用することは、始まりにすぎない。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "その人が働き続け、学び続け、能力を発揮できる環境をつくること。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "そこに、これからの組織設計の重要な役割がある。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "強い組織とは、誰も間違えない組織ではない。",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "分からないときに質問でき、失敗したときに学び直し、必要なときに助けを求められる組織である。",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "私は、そんな組織が増えていく社会を目指したい。"
+              }
+            ]
+          },
+          {
+            "type": "signature",
+            "content": [
+              {
+                "text": "NAOKI SUEHIRO\nGlobal Workforce Architect"
+              }
+            ]
+          }
+        ],
+        "en": [
+          {
+            "type": "heading",
+            "content": [
+              {
+                "text": "Is this a workplace where people can say, “I don’t understand”?"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "There is something we sometimes hear at work."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "“If you don’t understand, please ask.”"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "At first glance, it sounds obvious."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "But what really matters is not whether those words have been said."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "It is whether the other person feels safe enough to ask questions.",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Suppose, for example, that an international staff member has not fully understood the instructions for a task."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "They want to ask again."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "But they may worry that asking repeatedly will inconvenience others."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Or that others will think they lack ability."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Such concerns may make them hesitate to ask."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "In this situation, is it right to attribute the problem solely to that person’s Japanese language ability?"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "I do not think so."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "What is at stake is not only language ability, but the way the organization itself works."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "content": [
+              {
+                "text": "Some problems cannot be solved through Japanese language education alone."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Japanese language education is essential when welcoming people from overseas into the workforce."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Understanding instructions at work."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Expressing one’s thoughts."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Asking for advice when facing difficulties."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "These are important abilities that help people work with confidence."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Yet no matter how much Japanese someone learns, they cannot fully use those abilities in a workplace where asking questions is itself difficult."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "It takes not only effort from those learning the language, but also a receptive attitude from those listening."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "For example, managers can give instructions that are brief and clear."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "They can check the other person’s understanding of important information."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "When someone asks a question, they can review it together rather than blame the person."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "These everyday actions support communication in the workplace."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Japanese language education develops individual abilities, and it should also be connected to the way communication is designed across the organization.",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "I do not see Japanese language education as merely an employee benefit."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "It is part of the foundation that enables an organization to function."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Japanese language is not a skill. It is infrastructure."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "content": [
+              {
+                "text": "Psychological safety means more than simply being kind."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "There is a concept called psychological safety."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "It does not simply mean getting along at work or avoiding critical feedback."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "It means creating an environment where people can ask questions, express their views, and report mistakes when they need to."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "This is especially important in nursing care workplaces."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Sharing information that affects the safety of those receiving care."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Checking when uncertain about one’s own judgment."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Letting colleagues know when something feels even slightly wrong."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "These actions support the quality of everyday work."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "If staff begin to hesitate to report concerns for fear of being reprimanded, an organization may lose important information."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "That is why asking questions and reporting problems must not depend on individual courage alone."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Organizations need to design systems that make it safe for people to speak up.",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "content": [
+              {
+                "text": "Building a “structure that allows people to return” into organizations."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "When I think about education, I place great value on a “structure that allows people to return.”"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "When a child makes a mistake, we create an opportunity to think again rather than immediately providing the answer."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "When an attempt does not go well, we do not judge the child solely by that failure."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "And we leave room for them to try again."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "This idea also applies to organizations of adults."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Of course, there are responsibilities in the workplace."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Errors cannot be overlooked, especially in work that involves safety."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "But making responsibilities clear is different from intimidating people."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "When a mistake occurs, we examine its causes."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "We provide the necessary guidance."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "We establish systems to prevent it from happening again."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "And we create opportunities for the person to learn again."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "This is one form of what I call a “structure that allows people to return.”"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Allowing room for mistakes is different from leaving mistakes unaddressed.",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "I believe an organization where people can grow needs to be designed to distinguish between the two."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "content": [
+              {
+                "text": "What employers can begin doing tomorrow."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "I would like to propose three steps for companies considering hiring people from overseas."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "First, deliberately make time for questions.",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Rather than simply saying, “Please ask at any time,” set aside brief periods during the working day to check understanding."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "For example, review instructions before work begins and reflect afterward on any difficulties."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Make asking questions part of everyday work, rather than something out of the ordinary."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Second, review how managers communicate.",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "When a message in Japanese has not been fully understood, do not focus only on the other person’s ability to understand."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Were the instructions too long?"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Was too much technical terminology used?"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Was the message delivered in a way that made it easy for the other person to ask for clarification?"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Managers themselves also need to keep learning how to communicate."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Third, create systems for learning from mistakes.",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Rather than ending the discussion by assigning responsibility to an individual, examine why the mistake happened."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Improve the way instructions are given and the procedures for the work, as needed."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Then share those improvements across the organization."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "These accumulated efforts help people grow and build trust within the organization."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "content": [
+              {
+                "text": "Beyond connecting Okinawa and ASEAN."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "When thinking about systems for international employment that connect Okinawa and ASEAN, I do not want the number of people hired to be the sole focus of how we measure success."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "How many people were hired?"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "How many came to Japan?"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Of course, these are important indicators too."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "But there are things those numbers alone cannot show."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Do people feel safe asking questions at work?"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Are relationships of trust with managers developing?"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Is Japanese language education connected to their actual work and daily lives?"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "And do people feel that they are growing?"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Might paying attention to these questions help make international employment more sustainable?"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Hiring someone is only the beginning."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Creating an environment where that person can continue working, keep learning, and put their abilities to use."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "That is an important role for organizational design in the years ahead."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "A strong organization is not one where nobody makes mistakes.",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "It is one where people can ask questions when they do not understand, learn again when they fail, and ask for help when they need it.",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "I want to work toward a society with more organizations like that."
+              }
+            ]
+          },
+          {
+            "type": "signature",
+            "content": [
+              {
+                "text": "NAOKI SUEHIRO\nGlobal Workforce Architect"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "slug": "from-hiring-to-growing",
       "title": "From a Society That Hires People to One That Helps Them Grow",
       "field": "global-workforce",
-      "featured": true,
+      "featured": false,
       "status": "published",
       "issue": "ISSUE 002 / OCTOBER 2026",
       "image": "photo-1521737711867-e3b97375f902",
