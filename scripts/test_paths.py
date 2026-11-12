@@ -11,6 +11,7 @@ with tempfile.TemporaryDirectory(prefix='journal-paths-') as tmp:
     project = Path(tmp)
     for folder in ('scripts', 'content', 'templates', 'assets'):
         shutil.copytree(ROOT / folder, project / folder)
+    shutil.copy2(ROOT / 'issue-photos.b64', project / 'issue-photos.b64')
     outputs = []
     for prefix in ('', '/naoki-journal'):
         env = dict(os.environ, JOURNAL_BASE_PATH=prefix,
