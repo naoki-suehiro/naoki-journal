@@ -19,8 +19,8 @@
       "status": "published",
       "issue": "ISSUE 004 / NOVEMBER 2026",
       "datePublished": "2026-11-12",
-      "image": "photo-1521737711867-e3b97375f902",
-      "alt": "People gathered around a table in a shared workplace",
+      "image": "issue-004.jpg",
+      "alt": "A colleague leads a discussion at the glass while a manager takes notes, with the Okinawan sea behind them",
       "body": [],
       "articleTitle": "Are We Willing to Change as We Teach?",
       "subtitle": "Rethinking organizational learning through international employment.",
@@ -852,8 +852,8 @@
       "status": "published",
       "issue": "ISSUE 003 / NOVEMBER 2026",
       "datePublished": "2026-11-05",
-      "image": "photo-1521737711867-e3b97375f902",
-      "alt": "People gathered around a table in a shared workplace",
+      "image": "issue-003.jpg",
+      "alt": "A staff member raises a hand while colleagues listen beside a window overlooking Okinawa’s coast",
       "body": [],
       "articleTitle": "A Strong Workplace Makes It Safe to Ask for Help.",
       "subtitle": "Designing Psychological Safety Through International Employment and Japanese Language Education",
@@ -1159,7 +1159,7 @@
             "type": "paragraph",
             "content": [
               {
-                "text": "必要なときに質問し、意見を伝え、間違いを報告できる環境をつくることだ。"
+                "text": "必要なときに質問し、意見を伝え、間違いを報告できる環境をつくることだ��"
               }
             ]
           },
@@ -2407,8 +2407,8 @@
       "featured": false,
       "status": "published",
       "issue": "ISSUE 002 / OCTOBER 2026",
-      "image": "photo-1521737711867-e3b97375f902",
-      "alt": "People gathered around a table in a shared workplace",
+      "image": "issue-002.jpg",
+      "alt": "Coworkers exchange notes on training with the Okinawan sea behind them",
       "body": [],
       "articleTitle": "From a Society That Hires People to One That Helps Them Grow",
       "subtitle": "Rethinking International Employment Through Workplace Environments, Not Headcount",
@@ -3331,8 +3331,8 @@
       "featured": false,
       "status": "published",
       "issue": "ISSUE 001 / OCTOBER 2026",
-      "image": "photo-1519608487953-e999c86e7455",
-      "alt": "A quiet urban street in Japan at night",
+      "image": "issue-001.jpg",
+      "alt": "Colleagues compare a visual instruction sheet by a window overlooking the Okinawan coast",
       "body": [],
       "articleTitle": "Japanese Language Is Not a Skill. It Is Infrastructure.",
       "subtitle": "Language is more than an ability required for work. It is part of the infrastructure that allows people to live, belong, and connect.",
