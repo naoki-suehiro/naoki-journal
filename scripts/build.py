@@ -1,5 +1,6 @@
 #!/usr/bin/env python3
 """Generate a dependency-free static journal. Run from any directory."""
+from base64 import b64decode
 import json
 import re
 import shutil
@@ -40,12 +41,30 @@ for story in stories:
 assert len([s for s in stories if s.get('featured')]) == 1
 OUT.mkdir(exist_ok=True)
 shutil.copytree(ROOT / 'assets', OUT / 'assets', dirs_exist_ok=True)
+# Decode the issue album into ordinary JPEG assets for the published site.
+album = ROOT / 'issue-photos.b64'
+if album.is_file():
+    for photo in album.read_bytes().strip().split(b'\n\n'):
+        filename, _, encoded = photo.partition(b'\n')
+        assert re.fullmatch(rb'issue-[0-9]{3}\.jpg', filename), 'Invalid issue photo filename'
+        image = b64decode(b''.join(encoded.split()), validate=True)
+        assert image.startswith(b'\xff\xd8') and image.endswith(b'\xff\xd9'), 'Invalid JPEG'
+        (OUT / 'assets' / filename.decode('ascii')).write_bytes(image)
 e = escape
 
-def photo(story, width=1200):
+def photo(story, width=1200, *, absolute=False):
+    image = story['image']
+    if image.endswith('.jpg'):
+        asset_path = '/assets/' + image
+        assert (OUT / 'assets' / image).is_file(), f'Missing story image: {image}'
+        return (site_url if absolute else base_path) + asset_path
     return 'https://images.unsplash.com/' + story['image'] + '?auto=format&fit=crop&w=' + str(width) + '&q=85'
 
 def img(story, featured=False):
+    if story['image'].endswith('.jpg'):
+        priority = 'fetchpriority=high' if featured else 'loading=lazy'
+        return (f'<img class="issue-photo" src="{e(photo(story))}" alt="{e(story["alt"])}" '
+                f'width="1536" height="1024" {priority} decoding="async">')
     sizes = '(max-width: 700px) 100vw, 58vw' if featured else '(max-width: 700px) 45vw, (max-width: 1100px) 45vw, 23vw'
     return f'<img src="{e(photo(story))}" srcset="{e(photo(story,480))} 480w, {e(photo(story,960))} 960w, {e(photo(story,1600))} 1600w" sizes="{sizes}" alt="{e(story["alt"])}" width="1600" height="1100" {"fetchpriority=high" if featured else "loading=lazy"} decoding="async">'
 
@@ -123,7 +142,7 @@ def page(path, title, content, description=None, noindex=False, story=None, bili
         article = {'@type': 'BlogPosting', '@id': canonical + '#article',
                    'url': canonical, 'headline': story.get('articleTitle', story['title']),
                    'description': description or data['description'],
-                   'image': photo(story, 1600), 'author': {'@id': person_id},
+                   'image': photo(story, 1600, absolute=True), 'author': {'@id': person_id},
                    'publisher': {'@id': person_id},
                    'inLanguage': ['ja', 'en'] if bilingual else 'en',
                    'mainEntityOfPage': {'@id': canonical + '#webpage'},
@@ -143,7 +162,7 @@ def page(path, title, content, description=None, noindex=False, story=None, bili
         page_entity['breadcrumb'] = {'@id': canonical + '#breadcrumbs'}
     graph.append(page_entity)
     structured_data = json.dumps({'@context': 'https://schema.org', '@graph': graph}, ensure_ascii=False).replace('<', r'\u003c')
-    rendered = base.substitute(structured_data=structured_data,title=e(title), description=e(description or data['description']), canonical=e(canonical), content=content, robots='noindex, follow' if noindex else 'index, follow', og_type='article' if story and story['status'] == 'published' else 'website', og_image=e(photo(image_story,1600)), og_alt=e(image_story['alt']), document_lang='ja' if bilingual else 'en', og_locale='ja_JP' if bilingual else 'en_US', chrome_lang=' lang="en"' if bilingual else '', article_assets=article_assets, base_path=e(base_path))
+    rendered = base.substitute(structured_data=structured_data,title=e(title), description=e(description or data['description']), canonical=e(canonical), content=content, robots='noindex, follow' if noindex else 'index, follow', og_type='article' if story and story['status'] == 'published' else 'website', og_image=e(photo(image_story, 1600, absolute=True)), og_alt=e(image_story['alt']), document_lang='ja' if bilingual else 'en', og_locale='ja_JP' if bilingual else 'en_US', chrome_lang=' lang="en"' if bilingual else '', article_assets=article_assets, base_path=e(base_path))
     target.write_text(rendered)
     if not noindex:
         pages.append(canonical)
