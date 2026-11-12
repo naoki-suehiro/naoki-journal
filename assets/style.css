@@ -22,3 +22,11 @@
 .article-author{margin-top:48px;padding-top:24px;border-top:1px solid #ccc7bb;font-size:14px;line-height:1.9}
 .article-author .text-link{display:inline-block;margin:16px 24px 0 0;font-size:12px;letter-spacing:.02em}
 .article-summary{font-size:15px;line-height:2;margin-top:24px;max-width:46em}
+
+/* Keep the printed issue number visible in each photo crop. */
+.story-image img.issue-photo,
+.featured-image img.issue-photo,
+.article-image img.issue-photo {
+  object-position: left top;
+  filter: none;
+}
