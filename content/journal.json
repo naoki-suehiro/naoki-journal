@@ -12,10 +12,843 @@
   ],
   "stories": [
     {
+      "slug": "are-we-willing-to-change-as-we-teach",
+      "title": "Are We Willing to Change as We Teach?",
+      "field": "global-workforce",
+      "featured": true,
+      "status": "published",
+      "issue": "ISSUE 004 / NOVEMBER 2026",
+      "datePublished": "2026-11-12",
+      "image": "photo-1521737711867-e3b97375f902",
+      "alt": "People gathered around a table in a shared workplace",
+      "body": [],
+      "articleTitle": "Are We Willing to Change as We Teach?",
+      "subtitle": "Rethinking organizational learning through international employment.",
+      "issueLabel": "ISSUE 004",
+      "defaultLanguage": "ja",
+      "seoTitle": "教える側も、変わる覚悟があるか。｜末広尚希",
+      "description": "外国人材の受け入れから考える、組織が学ぶということ。幼児教育と介護現場を手がかりに、受け入れ企業が実践できる3つのことを提案する。",
+      "translations": {
+        "ja": [
+          {
+            "type": "lead",
+            "content": [
+              {
+                "text": "教える側も、変わる覚悟があるか。",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "lead",
+            "content": [
+              {
+                "text": "外国人材の受け入れから考える、組織が学ぶということ。"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "content": [
+              {
+                "text": "「日本のやり方を覚えてください」の、その先へ。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "外国人材を受け入れるとき、私たちは何を求めるだろうか。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "日本語を学ぶこと。職場のルールを理解すること。日本の文化や習慣に適応すること。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "いずれも大切なことである。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "しかし、ここで一つの問いを立てたい。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "受け入れる側の組織は、何を学ぶのだろうか。",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "異なる文化や価値観を持つ人が職場に加わるとき、変わるべきなのは新しく来た人だけなのだろうか。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "私は、外国人材の育成を一方的な適応のプロセスとして捉えることに限界があると考えている。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "人が組織から学ぶように、組織もまた、人から学ぶ必要がある。"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "content": [
+              {
+                "text": "教育は、一方通行ではない。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "幼児教育には、学びを考えるうえで重要な視点がある。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "子どもは、大人から知識を受け取るだけの存在ではない。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "自分で考え、試し、周囲と関わりながら学んでいく。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "そして大人もまた、子どもの反応や問いかけを通して、自分自身の関わり方を見直していく。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "教育とは、教師から学習者への一方的な知識の移動ではない。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "相互作用を通して、ともに変化していく営みでもある。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "私は、この考え方が外国人材の育成にも通じると思っている。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "外国人材に日本語や業務知識を教えることは必要だ。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "しかし、教える側が自らの説明方法や仕事の進め方を見直さなければ、学びの可能性は限定されてしまう。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "人を育てる組織は、自らも学び続ける組織でなければならない。",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "content": [
+              {
+                "text": "日本語教育を、組織の学習へ。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "例えば、介護現場を考えてみたい。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "外国人スタッフが業務指示を十分に理解できなかったとする。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "そのとき、「もっと日本語を勉強してください」と伝えるだけで問題は解決するだろうか。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "もちろん、日本語能力を高めることは重要である。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "しかし、同時に確認すべきことがある。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "指示は明確だったか。専門用語を使いすぎていなかったか。理解を確認する機会はあったか。質問しやすい関係が築かれていたか。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "これらは、本人の日本語能力とは別に、組織が改善できる領域である。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "lang": "en",
+            "content": [
+              {
+                "text": "Japanese language is not a skill. It is infrastructure.",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "この言葉が意味するのは、日本語の技能が不要だということではない。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "日本語によるコミュニケーションを、個人の能力だけに委ねず、職場全体で支える基盤として設計するということだ。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "日本語を学ぶ人と、日本語で伝える人。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "双方が学ぶことで、初めてコミュニケーションは機能する。"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "content": [
+              {
+                "text": "受け入れ企業が実践できる3つのこと。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "第一に、指示の伝え方を見直す。",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "短く明確な日本語を使い、必要に応じて図や実物を示す。重要な指示は、相手が内容を説明できるか確認する。安全に関わる場面では、曖昧な理解を残さない。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "第二に、学び合う時間をつくる。",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "外国人スタッフだけを研修の対象にするのではなく、管理者や日本人スタッフも異文化コミュニケーションを学ぶ。日常業務の中に、互いの疑問や改善案を共有する時間を設ける。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "第三に、組織自身の変化を評価する。",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "日本語試験の成績や業務習熟度だけでなく、質問のしやすさ、指示の分かりやすさ、改善提案への対応状況なども振り返る。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "人材の成長を測るだけでなく、組織がどれだけ学んだかを確かめるのである。"
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "content": [
+              {
+                "text": "沖縄とASEANをつなぐ、その先に。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "沖縄とASEANをつなぐ外国人雇用モデルにおいて、採用は目的ではなく出発点である。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "送り出す側の教育機関、受け入れる企業、働く本人。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "それぞれが異なる立場から学び、改善し、信頼を築いていく必要がある。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "外国人材が日本の職場に適応することだけを成功とするのではなく、その人を迎えたことで職場自身も成長する。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "そんな関係を設計したい。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "人を受け入れるということは、その人を変えることだけではない。自分たちも変わる可能性を受け入れることだ。",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "教える側も、学ぶ。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "受け入れる側も、変わる。"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "そこから、本当の意味で人が育つ組織が始まるのではないだろうか。"
+              }
+            ]
+          }
+        ],
+        "en": [
+          {
+            "type": "lead",
+            "content": [
+              {
+                "text": "Are We Willing to Change as We Teach?",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "lead",
+            "content": [
+              {
+                "text": "Rethinking organizational learning through international employment."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "content": [
+              {
+                "text": "Beyond asking people to adapt"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "When companies in Japan recruit international workers, they often focus on language proficiency, workplace rules, and cultural adaptation."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "These are important requirements."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "But there is another question worth asking."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "What is the receiving organization prepared to learn?",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "When people from different backgrounds join a workplace, should they be the only ones expected to change?"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "I believe international workforce development must be more than a one-way process of adaptation."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Just as individuals learn from organizations, organizations must learn from individuals."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "content": [
+              {
+                "text": "Education is not a one-way process"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "In early childhood education, children are not simply passive recipients of knowledge."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "They explore, experiment, ask questions, and learn through relationships."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Adults also learn by observing how children respond, think, and interact."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Education is not merely the transfer of knowledge from teacher to learner. It is also a process of mutual growth."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "I believe the same principle applies to international workforce development."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Teaching Japanese and professional skills is essential. But employers must also examine how they communicate, support learning, and organize work."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "An organization that develops people must be willing to develop itself.",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "content": [
+              {
+                "text": "Language education as organizational infrastructure"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Consider a care workplace where an international employee struggles to understand an instruction."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Additional Japanese language training may help."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "But is language proficiency the only issue?"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Was the instruction clear? Were technical terms explained? Did the supervisor check understanding? Was the employee comfortable asking questions?"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "These questions concern organizational practices, not simply individual ability."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Japanese language is not a skill. It is infrastructure.",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "This does not mean language skills are unimportant."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "It means effective communication should be supported by the organization, rather than treated solely as an individual responsibility."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Both the person learning Japanese and the person giving instructions have something to learn."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "content": [
+              {
+                "text": "Three practical steps for employers"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "First, improve the clarity of instructions.",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Use clear language, visual support when appropriate, and checks for understanding. In safety-critical situations, do not leave important instructions open to interpretation."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Second, create opportunities for mutual learning.",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Training should include supervisors and local employees, not only international workers. Teams need opportunities to discuss communication challenges and learn from different perspectives."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Third, evaluate organizational change.",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Language test results and job performance matter. But employers should also examine whether employees feel able to ask questions, whether instructions are understood, and whether feedback leads to improvements."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "The goal is to assess not only how workers are developing, but how the organization itself is learning."
+              }
+            ]
+          },
+          {
+            "type": "heading",
+            "content": [
+              {
+                "text": "Building connections between Okinawa and ASEAN"
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "In developing workforce partnerships between Okinawa, Japan, and ASEAN, recruitment should be the beginning, not the final objective."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Educational institutions, employers, and workers all have important roles in building sustainable relationships."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Success should not be defined only by how well international workers adapt to Japanese workplaces."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "It should also include how workplaces improve through working with people from different backgrounds."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Welcoming people is not only about helping them change. It is also about being willing to change ourselves.",
+                "strong": true
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Those who teach must continue learning."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "Those who welcome must remain open to change."
+              }
+            ]
+          },
+          {
+            "type": "paragraph",
+            "content": [
+              {
+                "text": "That is where organizations capable of developing people can begin."
+              }
+            ]
+          },
+          {
+            "type": "signature",
+            "content": [
+              {
+                "text": "NAOKI SUEHIRO\nGlobal Workforce Architect"
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
       "slug": "strong-workplaces-ask-for-help",
       "title": "A Strong Workplace Makes It Safe to Ask for Help.",
       "field": "global-workforce",
-      "featured": true,
+      "featured": false,
       "status": "published",
       "issue": "ISSUE 003 / NOVEMBER 2026",
       "datePublished": "2026-11-05",
