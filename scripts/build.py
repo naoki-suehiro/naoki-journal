@@ -44,7 +44,7 @@ shutil.copytree(ROOT / 'assets', OUT / 'assets', dirs_exist_ok=True)
 # Decode the issue album into ordinary JPEG assets for the published site.
 album = ROOT / 'issue-photos.b64'
 if album.is_file():
-    for photo in album.read_bytes().strip().split(b'\n\n'):
+    for photo in re.split(rb'\n{2,}', album.read_bytes().strip()):
         filename, _, encoded = photo.partition(b'\n')
         assert re.fullmatch(rb'issue-[0-9]{3}\.jpg', filename), 'Invalid issue photo filename'
         image = b64decode(b''.join(encoded.split()), validate=True)
